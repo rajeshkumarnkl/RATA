@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RATA</name>
+    </assembly>
+    <members>
+        <member name="F:RATA.ViewModel.MainViewModel.navigateToRentalCommand">
+            <summary>The backing field for <see cref="P:RATA.ViewModel.MainViewModel.NavigateToRentalCommand"/>.</summary>
+        </member>
+        <member name="P:RATA.ViewModel.MainViewModel.NavigateToRentalCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RATA.ViewModel.MainViewModel.NavigateToRental"/>.</summary>
+        </member>
+        <member name="P:RATA.ViewModel.TenantsViewModel.Tenant">
+            <inheritdoc cref="F:RATA.ViewModel.TenantsViewModel.tenant"/>
+        </member>
+        <member name="P:RATA.ViewModel.TenantsViewModel.Tenants">
+            <inheritdoc cref="F:RATA.ViewModel.TenantsViewModel.tenants"/>
+        </member>
+        <member name="P:RATA.ViewModel.TenantsViewModel.ShowAddTenant">
+            <inheritdoc cref="F:RATA.ViewModel.TenantsViewModel.showAddTenant"/>
+        </member>
+        <member name="P:RATA.ViewModel.TenantsViewModel.ShowAllTenants">
+            <inheritdoc cref="F:RATA.ViewModel.TenantsViewModel.showAllTenants"/>
+        </member>
+        <member name="P:RATA.ViewModel.TenantsViewModel.AddTenantLabel">
+            <inheritdoc cref="F:RATA.ViewModel.TenantsViewModel.addTenantLabel"/>
+        </member>
+        <member name="F:RATA.ViewModel.TenantsViewModel.takePhotoCommand">
+            <summary>The backing field for <see cref="P:RATA.ViewModel.TenantsViewModel.TakePhotoCommand"/>.</summary>
+        </member>
+        <member name="P:RATA.ViewModel.TenantsViewModel.TakePhotoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RATA.ViewModel.TenantsViewModel.TakePhoto"/>.</summary>
+        </member>
+        <member name="F:RATA.ViewModel.TenantsViewModel.addTenantCommand">
+            <summary>The backing field for <see cref="P:RATA.ViewModel.TenantsViewModel.AddTenantCommand"/>.</summary>
+        </member>
+        <member name="P:RATA.ViewModel.TenantsViewModel.AddTenantCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RATA.ViewModel.TenantsViewModel.AddTenant"/>.</summary>
+        </member>
+        <member name="F:RATA.ViewModel.TenantsViewModel.saveTenantDetailsCommand">
+            <summary>The backing field for <see cref="P:RATA.ViewModel.TenantsViewModel.SaveTenantDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:RATA.ViewModel.TenantsViewModel.SaveTenantDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:RATA.ViewModel.TenantsViewModel.SaveTenantDetails"/>.</summary>
+        </member>
+    </members>
+</doc>

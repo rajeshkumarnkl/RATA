@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RATA.Views.TenantsPage"
+             Title="TenantsPage">
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0"
+                    Text="{Binding AddTenantLabel}"
+                    Command="{Binding AddTenantCommand}" />
+            <CollectionView Grid.Row="1"
+                            IsVisible="{Binding ShowAllTenants}"
+                            SelectionMode="None"
+                            ItemsSource="{Binding Tenants}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="10"
+                               BorderColor="Blue"
+                               BackgroundColor="BlanchedAlmond">
+                            <Grid Margin="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0"
+                                       Grid.Column="0"
+                                       Margin="5"
+                                       FontSize="Header"
+                                       HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       Text="{Binding TenantName}" />
+                                <Label Grid.Row="1"
+                                       Grid.Column="0"
+                                       Margin="5"
+                                       HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       Text="{Binding MobileNumber}" />
+                                <Label Grid.Row="1"
+                                       Grid.Column="1"
+                                       Margin="5"
+                                       FontSize="Body"
+                                       HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       Text="{Binding RentedDate}" />
+                                <Label Grid.Row="0"
+                                       Grid.Column="1"
+                                       Margin="5"
+                                       FontSize="Body"
+                                       HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       Text="{Binding Advance}" />
+                                <Label Grid.Row="2"
+                                       Grid.Column="0"
+                                       Margin="5"
+                                       FontSize="Body"
+                                       HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       Text="{Binding SiteNumber}" />
+                                <Label Grid.Row="2"
+                                       Grid.Column="1"
+                                       Margin="5"
+                                       FontSize="Body"
+                                       HorizontalTextAlignment="Start"
+                                       VerticalTextAlignment="Center"
+                                       Text="{Binding FlatNumber}" />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Frame Grid.Row="2"
+                   Margin="5"
+                   IsVisible="{Binding ShowAddTenant}"
+                   BorderColor="Blue"
+                   BackgroundColor="Beige">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Entry Grid.Row="0"
+                           Placeholder="Tenant Name"
+                           Text="{Binding Tenant.TenantName}" />
+                    <Entry Grid.Row="1"
+                           Placeholder="Mobile Number"
+                           Margin="0,10,0,0"
+                           Text="{Binding Tenant.MobileNumber}" />
+                    <Entry Grid.Row="2"
+                           Placeholder="Site Number"
+                           Margin="0,10,0,0"
+                           Text="{Binding Tenant.SiteNumber}" />
+                    <Entry Grid.Row="3"
+                           Placeholder="Flat Number"
+                           Margin="0,10,0,0"
+                           Text="{Binding Tenant.FlatNumber}" />
+                    <DatePicker Grid.Row="4"
+                                Date="{Binding Tenant.RentedDate}"
+                                MinimumDate="{Binding Tenant.MinDate}"
+                                Margin="0,10,0,0" />
+                    <Entry Grid.Row="5"
+                           Placeholder="Advance"
+                           Margin="0,10,0,0"
+                           Text="{Binding Tenant.Advance}" />
+                    <Entry Grid.Row="6"
+                           Placeholder="Rent"
+                           Margin="0,10,0,0"
+                           Text="{Binding Tenant.Rent}" />
+                    <Entry Grid.Row="7"
+                           Placeholder="Vacated Date"
+                           Margin="0,10,0,0"
+                           Text="{Binding Tenant.VacatedDate}" />
+                    <Entry Grid.Row="8"
+                           Placeholder="Permanent Address"
+                           Margin="0,10,0,0"
+                           Text="{Binding Tenant.PermanentAddress}" />
+                    <Button Grid.Row="9"
+                            Text="Upload Document"
+                            Command="{Binding TakePhotoCommand}"
+                            Margin="0,10,0,0" />
+                    <Button Grid.Row="10"
+                            Text="Save Details"
+                            Command="{Binding SaveTenantDetailsCommand}"
+                            Margin="0,10,0,0" />
+                </Grid>
+            </Frame>
+        </Grid>
+    </ScrollView>
+</ContentPage>
