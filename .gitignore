@@ -4,3 +4,7 @@
 
 /.vs
 /RATA/.vs/RATA
+/RATA/RATA.Migrator/obj/Debug/net8.0
+/RATA/RATA.Migrator/obj/Release/net8.0
+/RATA/RATA.Shared/obj/Debug/net8.0
+/RATA/RATA.Shared/obj/Release/net8.0
